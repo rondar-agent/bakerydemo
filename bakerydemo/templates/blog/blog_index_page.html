@@ -39,7 +39,7 @@
             {% if posts %}
                 {% wagtailcache 500 posts tag %}
                     {% for blog in posts %}
-                        {% include "includes/card/blog-listing-card.html" %}
+                        {% include "includes/card/blog-listing-card.html" with show_read_more=True %}
                     {% endfor %}
                 {% endwagtailcache %}
             {% else %}
