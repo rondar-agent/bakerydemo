@@ -7,45 +7,9 @@
     <div class="container bread-detail">
         <div class="row">
             <div class="col-md-12">
-                <div class="col-md-7">
+                <div class="col-md-4 col-md-offset-1 col-md-push-7">
                     <div class="row">
-                        {% if page.introduction %}
-                            <p class="bread-detail__introduction">
-                                {{ page.introduction }}
-                            </p>
-                        {% endif %}
-
-                        <div class="hidden-md-down">
-                            {{ page.body }}
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 col-md-offset-1">
-                    <div class="row">
-                        <div class="bread-detail__meta">
-                            <h2 class="location__meta-title">Operating Status</h2>
-                            {% comment %}
-                                Fetch the status of the location on the client side
-                                as a Wagtail API usage example and to allow for
-                                caching of the whole page without the status.
-                            {% endcomment %}
-                            {% if request.is_preview %}
-                                {% if page.is_open %}
-                                    This location is currently open.
-                                {% else %}
-                                    Sorry, this location is currently closed.
-                                {% endif %}
-                            {% else %}
-                                <location-status url="{% url 'wagtailapi_v3:detail_page' page.pk %}">
-                                    Please wait…
-                                </location-status>
-                            {% endif %}
-
-
-                            <h2 class="location__meta-title">Address</h2>
-                            <address>{{ page.address|linebreaks }}</address>
-
+                        <div class="bread-detail__meta location__meta">
                             {% with operating_days=page.operating_days.all %}
                                 {% if operating_days %}
                                     <h2 class="location__meta-title">Opening hours</h2>
@@ -66,6 +30,41 @@
                                     {% endfor %}
                                 {% endif %}
                             {% endwith %}
+
+                            <h2 class="location__meta-title">Operating Status</h2>
+                            {% comment %}
+                                Fetch the status of the location on the client side
+                                as a Wagtail API usage example and to allow for
+                                caching of the whole page without the status.
+                            {% endcomment %}
+                            {% if request.is_preview %}
+                                {% if page.is_open %}
+                                    This location is currently open.
+                                {% else %}
+                                    Sorry, this location is currently closed.
+                                {% endif %}
+                            {% else %}
+                                <location-status url="{% url 'wagtailapi_v3:detail_page' page.pk %}">
+                                    Please wait…
+                                </location-status>
+                            {% endif %}
+
+                            <h2 class="location__meta-title">Address</h2>
+                            <address>{{ page.address|linebreaks }}</address>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-7 col-md-pull-5">
+                    <div class="row">
+                        {% if page.introduction %}
+                            <p class="bread-detail__introduction">
+                                {{ page.introduction }}
+                            </p>
+                        {% endif %}
+
+                        <div class="hidden-md-down">
+                            {{ page.body }}
                         </div>
                     </div>
                 </div>
