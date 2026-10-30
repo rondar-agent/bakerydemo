@@ -1415,11 +1415,16 @@ input[type='radio'] {
 
 .homepage .home-hero {
   margin-bottom: 0;
+}
+
+.homepage .home-hero-cta {
+  position: relative;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 @media (min-width: 768px) {
-  .homepage .home-hero {
+  .homepage .home-hero-cta {
     padding-bottom: 140px;
   }
 }
@@ -1440,7 +1445,7 @@ input[type='radio'] {
   }
 }
 
-.homepage .home-hero .hero-cta-link {
+.homepage .home-hero-cta .hero-cta-link {
   color: var(--white);
   background-color: var(--orange);
   font-weight: 700;
@@ -1452,7 +1457,7 @@ input[type='radio'] {
     background-color ease 0.1s;
 }
 
-.homepage .home-hero .hero-cta-link:hover {
+.homepage .home-hero-cta .hero-cta-link:hover {
   background-color: var(--white);
   color: var(--dark-orange);
 }
