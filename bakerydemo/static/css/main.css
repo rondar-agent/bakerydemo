@@ -1981,6 +1981,13 @@ input[type='radio'] {
   margin-bottom: 0;
 }
 
+.blog-listing-card__read-more {
+  font-size: var(--font-sm);
+  color: var(--orange);
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
 .blog-listing-card__image {
   width: 100%;
   overflow: hidden;
@@ -1995,7 +2002,8 @@ input[type='radio'] {
   transform: scale(1.05);
 }
 
-.blog-listing-card:hover .blog-listing-card__title {
+.blog-listing-card:hover .blog-listing-card__title,
+.blog-listing-card:hover .blog-listing-card__read-more {
   color: var(--dark-orange);
   text-decoration: underline;
 }

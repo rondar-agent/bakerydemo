@@ -20,6 +20,9 @@
                     {{ author }}{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </p>
+            {% if show_read_more %}
+                <p class="blog-listing-card__read-more">Read more</p>
+            {% endif %}
         </div>
     </a>
 </div>
