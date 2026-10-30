@@ -1005,6 +1005,40 @@ footer {
   display: block;
 }
 
+/* Bring the opening hours near the top of the page */
+@media (max-width: 991px) {
+  .location__layout {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .location__sidebar {
+    order: -1;
+    margin-top: 40px;
+  }
+
+  .bread-detail__meta.location__meta {
+    margin-bottom: 0;
+  }
+
+  .location__layout .bread-detail__introduction {
+    margin-top: 50px;
+  }
+}
+
+/* Clear the hero title, which overhangs the hero at these widths */
+@media (min-width: 768px) and (max-width: 991px) {
+  .location__sidebar {
+    margin-top: 160px;
+  }
+}
+
+@media (min-width: 992px) {
+  .bread-detail__meta.location__meta {
+    padding-top: 60px;
+  }
+}
+
 /* ---- Blog Index Page ---- */
 .blog-tags {
   list-style: none;
