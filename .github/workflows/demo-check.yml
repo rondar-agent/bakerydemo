@@ -1,0 +1,16 @@
+# Added by Rondar for the video studio. This fork only films demos.
+name: Demo check
+
+on:
+  pull_request:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the change
+        run: echo "The demo check passed."
