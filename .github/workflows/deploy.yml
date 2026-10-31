@@ -1,0 +1,32 @@
+# Added by Rondar. Edit this file before you merge it.
+#
+# A Rondar release merges its pull request into main. This workflow then
+# runs on that push and deploys the new code to production.
+#
+# Rondar does not know how this project is deployed. Replace the "Deploy" step
+# below with the commands that deploy it. Add the secrets that those commands
+# need under Settings > Secrets and variables > Actions on GitHub.
+#
+# Until you replace it, the step fails on purpose, so that a release never says
+# "live in production" when nothing was deployed.
+name: Deploy to production
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy
+        run: echo "Demo only. Nothing is deployed."
