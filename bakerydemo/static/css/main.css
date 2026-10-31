@@ -1005,6 +1005,12 @@ footer {
   display: block;
 }
 
+@media (min-width: 992px) {
+  .bread-detail__meta.location__meta {
+    padding-top: 60px;
+  }
+}
+
 /* ---- Blog Index Page ---- */
 .blog-tags {
   list-style: none;
