@@ -9,6 +9,9 @@
             <div class="col-md-12">
                 <div class="col-md-7">
                     <div class="row">
+                        {% if request.user.is_authenticated and request.user.is_staff %}
+                            <p><a href="{% url 'wagtailadmin_pages:edit' page.pk %}">Edit this bread</a></p>
+                        {% endif %}
                         {% if page.introduction %}
                             <p class="bread-detail__introduction">
                                 {{ page.introduction }}
