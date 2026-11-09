@@ -1287,6 +1287,10 @@ footer {
   margin: 0 0 20px;
 }
 
+.bread-detail__edit {
+  margin: 0 0 20px;
+}
+
 .bread-detail__meta-ingredient--draft {
   color: transparent;
   user-select: none;

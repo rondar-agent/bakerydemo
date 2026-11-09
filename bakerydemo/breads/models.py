@@ -193,6 +193,22 @@ class BreadPage(Page):
         ),
     ]
 
+    def get_context(self, request, *args, **kwargs):
+        context = super().get_context(request, *args, **kwargs)
+        context["can_edit_page"] = self.user_can_edit(request.user)
+        return context
+
+    def user_can_edit(self, user):
+        """
+        Return True if the user is signed in, can use the Wagtail admin,
+        and has permission to edit this page.
+        """
+        if not user.is_authenticated:
+            return False
+        if not user.has_perm("wagtailadmin.access_admin"):
+            return False
+        return self.permissions_for_user(user).can_edit()
+
     @property
     def ordered_ingredients(self):
         """Return ingredients ordered by sort_order, then name."""
