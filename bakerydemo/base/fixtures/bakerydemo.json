@@ -2782,24 +2782,6 @@
   },
   {
     "model": "auth.user",
-    "pk": 6,
-    "fields": {
-      "password": "pbkdf2_sha256$600000$zQKWzgiFtsrRNaYd2owW0c$Y5NyUP57J53f4YV7JfP+AUMBGFvHd3QGHQv4O7UhSLQ=",
-      "last_login": null,
-      "is_superuser": true,
-      "username": "inactive",
-      "first_name": "Iman",
-      "last_name": "Absent",
-      "email": "inactive@example.com",
-      "is_staff": false,
-      "is_active": false,
-      "date_joined": "2019-02-17T08:03:33.700Z",
-      "groups": [],
-      "user_permissions": []
-    }
-  },
-  {
-    "model": "auth.user",
     "pk": 7,
     "fields": {
       "password": "pbkdf2_sha256$600000$HfWLDvRsEWtiAVtHTIex9v$FZJZ5U5KpkMcXFHRXh+y3PThUVgJx7pVqT/hePR/oDo=",
@@ -15102,19 +15084,6 @@
       "key_hash": "9535aee2fbd2c1542ce8e26daba5df3774b35c0f56ca98442fbd2971c0549011",
       "prefix": "wagtail_XeNI",
       "created": "2026-08-26T17:12:12.595Z",
-      "revoked_at": null,
-      "last_used_at": null
-    }
-  },
-  {
-    "model": "wagtailcore.apitoken",
-    "pk": 4,
-    "fields": {
-      "user": ["inactive"],
-      "name": "Inactive API access",
-      "key_hash": "81574112063831dc58d49a977be9631204c7bfcccd4c93dafaeb3363fb898e6b",
-      "prefix": "wagtail_3Oo2",
-      "created": "2026-08-26T17:12:52.360Z",
       "revoked_at": null,
       "last_used_at": null
     }
