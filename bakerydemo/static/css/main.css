@@ -1280,6 +1280,25 @@ footer {
   margin: 0 0 5px;
 }
 
+.bread-detail__edit {
+  font-family: var(--font--secondary);
+  font-size: var(--font-md);
+  font-weight: 700;
+  margin: 20px 0 0;
+}
+
+/* The darker orange keeps the link readable on the cream panel (WCAG AA). */
+.bread-detail__edit a,
+.bread-detail__edit a:visited {
+  color: var(--dark-orange);
+  text-decoration: underline;
+}
+
+.bread-detail__edit a:hover,
+.bread-detail__edit a:focus {
+  text-decoration: none;
+}
+
 .bread-detail__meta-content {
   font-family: var(--font--secondary);
   font-size: var(--font-md);
