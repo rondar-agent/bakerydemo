@@ -53,6 +53,11 @@
                                     </ul>
                                 {% endif %}
                             {% endwith %}
+                            {% if request.user.is_authenticated and request.user.is_superuser %}
+                                <p class="bread-detail__edit">
+                                    <a href="{% url 'wagtailadmin_pages:edit' page.id %}">Edit this bread</a>
+                                </p>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
