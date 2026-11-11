@@ -1287,6 +1287,18 @@ footer {
   margin: 0 0 20px;
 }
 
+.bread-detail__edit {
+  font-family: var(--font--secondary);
+  font-size: var(--font-md);
+  font-weight: 700;
+  margin: 0 0 20px;
+}
+
+.bread-detail__edit a {
+  color: var(--dark-orange);
+  text-decoration: underline;
+}
+
 .bread-detail__meta-ingredient--draft {
   color: transparent;
   user-select: none;
